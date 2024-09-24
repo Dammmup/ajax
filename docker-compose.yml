@@ -1,0 +1,10 @@
+version: "3"
+services:
+  frontend:
+    image: frontend-image
+    build: .
+    ports:
+      - "3333:3333"
+    volumes:
+      - .:/app
+    command: ["npx", "live-server", "--port=3333", "--host=0.0.0.0"]
